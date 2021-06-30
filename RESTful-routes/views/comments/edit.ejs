@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Editing comment</title>
+  </head>
+  <body>
+    <h1>Editing your comment</h1>
+
+    <h2>Your id: <%= id %></h2>
+
+    <form action="/comments/<%=comment.id%>?_method=PATCH" method="POST">
+      <textarea name="comment" id="comment" cols="30" rows="10">
+<%= comment.comment %>
+      </textarea>
+      <br />
+      <button>Edit</button>
+    </form>
+
+    <a href="/comments">Back to comments</a>
+  </body>
+</html>
